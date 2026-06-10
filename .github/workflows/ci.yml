@@ -35,9 +35,21 @@ jobs:
             || { echo "=== last 300 lines ==="; tail -300 xcodebuild.log; exit 1; }
           tail -40 xcodebuild.log
 
+      - name: Show crash reports
+        if: failure()
+        run: |
+          ls ~/Library/Logs/DiagnosticReports/ 2>/dev/null || true
+          for f in ~/Library/Logs/DiagnosticReports/TaskAlarm*.ips; do
+            [ -e "$f" ] || continue
+            echo "=== $f ==="
+            head -200 "$f"
+          done
+
       - name: Upload full build log
         if: failure()
         uses: actions/upload-artifact@v4
         with:
           name: xcodebuild-log
-          path: xcodebuild.log
+          path: |
+            xcodebuild.log
+            ~/Library/Logs/DiagnosticReports/*.ips
