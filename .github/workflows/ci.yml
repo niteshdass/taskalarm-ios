@@ -31,4 +31,13 @@ jobs:
             -scheme TaskAlarm \
             -destination "platform=iOS Simulator,name=${{ steps.sim.outputs.device }}" \
             CODE_SIGNING_ALLOWED=NO \
-            | tail -100
+            > xcodebuild.log 2>&1 \
+            || { echo "=== last 300 lines ==="; tail -300 xcodebuild.log; exit 1; }
+          tail -40 xcodebuild.log
+
+      - name: Upload full build log
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: xcodebuild-log
+          path: xcodebuild.log
