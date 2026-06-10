@@ -19,8 +19,8 @@ struct TaskGateView: View {
 
     @ViewBuilder
     private var content: some View {
-        let alarm = try? modelContext.fetch(
-            FetchDescriptor<AlarmItem>(predicate: #Predicate { $0.id == alarmID })).first
+        let alarm = (try? modelContext.fetch(FetchDescriptor<AlarmItem>()))?
+            .first { $0.id == alarmID }
         let qrPayload = (try? modelContext.fetch(FetchDescriptor<QRCodeRecord>()).first)?.payload
 
         if let alarm, alarm.taskType == .qrScan, let qrPayload, !forcePhraseFallback {
