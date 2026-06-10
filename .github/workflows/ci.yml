@@ -1,0 +1,52 @@
+name: CI
+
+on:
+  push:
+    branches: [master, "feature/**"]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: macos-26
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      - name: Pick an available iPhone simulator
+        id: sim
+        run: |
+          DEVICE=$(xcrun simctl list devices available -j \
+            | jq -r '[.devices[] | .[] | select(.isAvailable and (.name | startswith("iPhone")))][0].name')
+          echo "Using simulator: $DEVICE"
+          echo "device=$DEVICE" >> "$GITHUB_OUTPUT"
+
+      - name: Build and test
+        run: |
+          set -o pipefail
+          xcodebuild test \
+            -project TaskAlarm.xcodeproj \
+            -scheme TaskAlarm \
+            -destination "platform=iOS Simulator,name=${{ steps.sim.outputs.device }}" \
+            CODE_SIGNING_ALLOWED=NO \
+            > xcodebuild.log 2>&1 \
+            || { echo "=== last 300 lines ==="; tail -300 xcodebuild.log; exit 1; }
+          tail -40 xcodebuild.log
+
+      - name: Show crash reports
+        if: failure()
+        run: |
+          sleep 20   # crash reports are written asynchronously
+          find ~/Library/Logs/DiagnosticReports -name '*.ips' 2>/dev/null || true
+          find ~/Library/Logs/DiagnosticReports -name 'TaskAlarm*.ips' -exec sh -c 'echo "=== $1 ==="; cat "$1"' _ {} \; || true
+
+      - name: Upload full build log
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: xcodebuild-log
+          path: |
+            xcodebuild.log
+            ~/Library/Logs/DiagnosticReports/*.ips

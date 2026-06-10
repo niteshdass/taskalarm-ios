@@ -1,0 +1,541 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		16CDFB57B7131A26C87782B4 /* QRTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E20633D11B6A3AD970B20 /* QRTaskTests.swift */; };
+		18DAB9F950095155A5BEC3E9 /* TaskGateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4000F42CFC239EB600A1D38 /* TaskGateView.swift */; };
+		2239D358BB4BC22AAAF3A394 /* QRCodeRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD5E14A985F48A91855A657 /* QRCodeRecord.swift */; };
+		234B783A3B596F1B68D31756 /* AlarmEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7D563C4F85EAC2461B5208 /* AlarmEditView.swift */; };
+		266070F6B8A4B602A2F753E8 /* StopWithoutTaskIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA13F6BB3513506D075B797 /* StopWithoutTaskIntent.swift */; };
+		2A784C4E291E991BC75D0B4E /* GateServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D108800E7FD154D4E7B368C /* GateServiceTests.swift */; };
+		33466B914415389E81734732 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A75F96845750136EA71CD0 /* AppRouter.swift */; };
+		33A9F4594BDC2DD0FE9E05AF /* SnoozePolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB6232348DED3909774F681 /* SnoozePolicy.swift */; };
+		3C99231477F802FA207D2E9E /* PostTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3318A79A9B441A0907C5B7 /* PostTaskView.swift */; };
+		485BD0212779E1FE36B3C235 /* QRScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D444A4298CCC2EAAB61C601 /* QRScanView.swift */; };
+		4C7DC047C3B3B5B244C10D14 /* GuardPolicyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC357029F743FCA7310B38FF /* GuardPolicyTests.swift */; };
+		55FB2F12BC260BFAECDFCCB7 /* QRSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165A5D597BAEB6155EA35CBF /* QRSetupView.swift */; };
+		5A0299FCCDA7BC95F11F7321 /* GuardPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F68C5AD8726517978BDBC14 /* GuardPolicy.swift */; };
+		643147D29C361814A6B8B8BD /* AlarmListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6673CA0293630DDF6AC418A0 /* AlarmListView.swift */; };
+		6D33292C83266D7B105E9C4E /* AlarmKitScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8519557DDF9CF3433AB25DF3 /* AlarmKitScheduler.swift */; };
+		798B5A8BCB852393DF3FD767 /* PhraseTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5205928D1AC8087737D57B40 /* PhraseTaskView.swift */; };
+		7C7AF23D62B2106C103CD591 /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B509BA4C850E50F318558E7C /* ModelTests.swift */; };
+		94B30715ABD0E2AD99CA795D /* GateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD7F94B4F13B6F44F05B950 /* GateService.swift */; };
+		9C50ECB7E0ADFA5AF0CA1D9E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F54271A1167EEDDB42BB32E /* ContentView.swift */; };
+		A7AAEB16170FE6C737CDC559 /* OpenTaskGateIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC8E8FE742E72AA09EC14AB /* OpenTaskGateIntent.swift */; };
+		AAE4A6FA629FB67914915A25 /* AuthorizationBlockedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610DD0F5A7431E17FCB76F9A /* AuthorizationBlockedView.swift */; };
+		D7490BF12305B888DCCC4CD4 /* SnoozePolicyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628ECD94B5468D566AB92A26 /* SnoozePolicyTests.swift */; };
+		D9BCC975906B7A695DD58E20 /* AlarmScheduling.swift in Sources */ = {isa = PBXBuildFile; fileRef = E747240B6AB16004AE4B9E72 /* AlarmScheduling.swift */; };
+		DB0BEDB7E3AB042DE3E22FEF /* PendingTaskState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9ACA2620D9B2FC569B4342 /* PendingTaskState.swift */; };
+		E04F92C10A27C8DA228D6325 /* QRTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B2716608FE59058A54F894 /* QRTask.swift */; };
+		E433FA3DBB9FEC610FC2E810 /* TaskType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F073ACB3EF7F9CF8D4FF55 /* TaskType.swift */; };
+		E87B406CB2860A7AC687D01F /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272CAE8B208E5CEB4C1FC547 /* Alarm.swift */; };
+		F29467DC591E4EB3B618A2F9 /* TaskAlarmApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F733FBE37D99956E89231FF /* TaskAlarmApp.swift */; };
+		F373D75BAE4157D4B5B252BE /* PhraseTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0929DDFFB8274D219A1374B9 /* PhraseTask.swift */; };
+		F53C19E17C0CBB82BB397C61 /* PhraseTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD372143124E29CD3A35DCCD /* PhraseTaskTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		424FC024994252C5DE7F5914 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 395555B33C55556A06B5FA6F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE45EC7F3ECD34D1E04D7A71;
+			remoteInfo = TaskAlarm;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0929DDFFB8274D219A1374B9 /* PhraseTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseTask.swift; sourceTree = "<group>"; };
+		0D108800E7FD154D4E7B368C /* GateServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GateServiceTests.swift; sourceTree = "<group>"; };
+		0D444A4298CCC2EAAB61C601 /* QRScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScanView.swift; sourceTree = "<group>"; };
+		0F68C5AD8726517978BDBC14 /* GuardPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardPolicy.swift; sourceTree = "<group>"; };
+		165A5D597BAEB6155EA35CBF /* QRSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRSetupView.swift; sourceTree = "<group>"; };
+		1AD5E14A985F48A91855A657 /* QRCodeRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeRecord.swift; sourceTree = "<group>"; };
+		1E9ACA2620D9B2FC569B4342 /* PendingTaskState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingTaskState.swift; sourceTree = "<group>"; };
+		21CB690B3708572759DB7192 /* TaskAlarmTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = TaskAlarmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		272CAE8B208E5CEB4C1FC547 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
+		3EA13F6BB3513506D075B797 /* StopWithoutTaskIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWithoutTaskIntent.swift; sourceTree = "<group>"; };
+		3F54271A1167EEDDB42BB32E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3F9EE0E6787EE20827ADC618 /* TaskAlarm.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = TaskAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DC8E8FE742E72AA09EC14AB /* OpenTaskGateIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenTaskGateIntent.swift; sourceTree = "<group>"; };
+		4F733FBE37D99956E89231FF /* TaskAlarmApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskAlarmApp.swift; sourceTree = "<group>"; };
+		5205928D1AC8087737D57B40 /* PhraseTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseTaskView.swift; sourceTree = "<group>"; };
+		610DD0F5A7431E17FCB76F9A /* AuthorizationBlockedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationBlockedView.swift; sourceTree = "<group>"; };
+		628ECD94B5468D566AB92A26 /* SnoozePolicyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnoozePolicyTests.swift; sourceTree = "<group>"; };
+		6673CA0293630DDF6AC418A0 /* AlarmListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmListView.swift; sourceTree = "<group>"; };
+		67A75F96845750136EA71CD0 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		7E7D563C4F85EAC2461B5208 /* AlarmEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmEditView.swift; sourceTree = "<group>"; };
+		840E20633D11B6A3AD970B20 /* QRTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRTaskTests.swift; sourceTree = "<group>"; };
+		8519557DDF9CF3433AB25DF3 /* AlarmKitScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmKitScheduler.swift; sourceTree = "<group>"; };
+		89F073ACB3EF7F9CF8D4FF55 /* TaskType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskType.swift; sourceTree = "<group>"; };
+		8FD7F94B4F13B6F44F05B950 /* GateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GateService.swift; sourceTree = "<group>"; };
+		9F3318A79A9B441A0907C5B7 /* PostTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTaskView.swift; sourceTree = "<group>"; };
+		A4000F42CFC239EB600A1D38 /* TaskGateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskGateView.swift; sourceTree = "<group>"; };
+		AD372143124E29CD3A35DCCD /* PhraseTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseTaskTests.swift; sourceTree = "<group>"; };
+		B509BA4C850E50F318558E7C /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
+		CC357029F743FCA7310B38FF /* GuardPolicyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardPolicyTests.swift; sourceTree = "<group>"; };
+		E747240B6AB16004AE4B9E72 /* AlarmScheduling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmScheduling.swift; sourceTree = "<group>"; };
+		EBB6232348DED3909774F681 /* SnoozePolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnoozePolicy.swift; sourceTree = "<group>"; };
+		F3B2716608FE59058A54F894 /* QRTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRTask.swift; sourceTree = "<group>"; };
+		FB945D7206A821621645B9DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		027F1D17B3BA4512622FFCE3 /* Scheduling */ = {
+			isa = PBXGroup;
+			children = (
+				8519557DDF9CF3433AB25DF3 /* AlarmKitScheduler.swift */,
+				E747240B6AB16004AE4B9E72 /* AlarmScheduling.swift */,
+			);
+			path = Scheduling;
+			sourceTree = "<group>";
+		};
+		0F60EAE76085D63B02A5B204 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				272CAE8B208E5CEB4C1FC547 /* Alarm.swift */,
+				1E9ACA2620D9B2FC569B4342 /* PendingTaskState.swift */,
+				1AD5E14A985F48A91855A657 /* QRCodeRecord.swift */,
+				89F073ACB3EF7F9CF8D4FF55 /* TaskType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		21FA376AFB7C620D3C3B47E8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7E7D563C4F85EAC2461B5208 /* AlarmEditView.swift */,
+				6673CA0293630DDF6AC418A0 /* AlarmListView.swift */,
+				610DD0F5A7431E17FCB76F9A /* AuthorizationBlockedView.swift */,
+				5205928D1AC8087737D57B40 /* PhraseTaskView.swift */,
+				9F3318A79A9B441A0907C5B7 /* PostTaskView.swift */,
+				0D444A4298CCC2EAAB61C601 /* QRScanView.swift */,
+				165A5D597BAEB6155EA35CBF /* QRSetupView.swift */,
+				A4000F42CFC239EB600A1D38 /* TaskGateView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		36584569A115DEF6097BF8AF /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				0F68C5AD8726517978BDBC14 /* GuardPolicy.swift */,
+				0929DDFFB8274D219A1374B9 /* PhraseTask.swift */,
+				F3B2716608FE59058A54F894 /* QRTask.swift */,
+				EBB6232348DED3909774F681 /* SnoozePolicy.swift */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		39F6D400F0124863F1ED735A /* Intents */ = {
+			isa = PBXGroup;
+			children = (
+				4DC8E8FE742E72AA09EC14AB /* OpenTaskGateIntent.swift */,
+				3EA13F6BB3513506D075B797 /* StopWithoutTaskIntent.swift */,
+			);
+			path = Intents;
+			sourceTree = "<group>";
+		};
+		631D1CBF8E697D2F98495974 = {
+			isa = PBXGroup;
+			children = (
+				6F0C5F86E6BC6EA3F5859834 /* TaskAlarm */,
+				68461F23BC4C1F323501F82F /* TaskAlarmTests */,
+				EC161C27C9464C143043F428 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		68461F23BC4C1F323501F82F /* TaskAlarmTests */ = {
+			isa = PBXGroup;
+			children = (
+				0D108800E7FD154D4E7B368C /* GateServiceTests.swift */,
+				CC357029F743FCA7310B38FF /* GuardPolicyTests.swift */,
+				B509BA4C850E50F318558E7C /* ModelTests.swift */,
+				AD372143124E29CD3A35DCCD /* PhraseTaskTests.swift */,
+				840E20633D11B6A3AD970B20 /* QRTaskTests.swift */,
+				628ECD94B5468D566AB92A26 /* SnoozePolicyTests.swift */,
+			);
+			path = TaskAlarmTests;
+			sourceTree = "<group>";
+		};
+		6F0C5F86E6BC6EA3F5859834 /* TaskAlarm */ = {
+			isa = PBXGroup;
+			children = (
+				67A75F96845750136EA71CD0 /* AppRouter.swift */,
+				3F54271A1167EEDDB42BB32E /* ContentView.swift */,
+				8FD7F94B4F13B6F44F05B950 /* GateService.swift */,
+				FB945D7206A821621645B9DA /* Info.plist */,
+				4F733FBE37D99956E89231FF /* TaskAlarmApp.swift */,
+				39F6D400F0124863F1ED735A /* Intents */,
+				36584569A115DEF6097BF8AF /* Logic */,
+				0F60EAE76085D63B02A5B204 /* Models */,
+				027F1D17B3BA4512622FFCE3 /* Scheduling */,
+				21FA376AFB7C620D3C3B47E8 /* Views */,
+			);
+			path = TaskAlarm;
+			sourceTree = "<group>";
+		};
+		EC161C27C9464C143043F428 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3F9EE0E6787EE20827ADC618 /* TaskAlarm.app */,
+				21CB690B3708572759DB7192 /* TaskAlarmTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AE45EC7F3ECD34D1E04D7A71 /* TaskAlarm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7078C1E53FE07CF9575274E5 /* Build configuration list for PBXNativeTarget "TaskAlarm" */;
+			buildPhases = (
+				9A97323AE61C05AF3FFC1B1D /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TaskAlarm;
+			packageProductDependencies = (
+			);
+			productName = TaskAlarm;
+			productReference = 3F9EE0E6787EE20827ADC618 /* TaskAlarm.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CFCD50AFD045668851C7A3DF /* TaskAlarmTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0EB7CCE1482BF965CB3A93F4 /* Build configuration list for PBXNativeTarget "TaskAlarmTests" */;
+			buildPhases = (
+				42285092559E9E68A5DFA04D /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				028F7BA6A499C25D0ECEDA26 /* PBXTargetDependency */,
+			);
+			name = TaskAlarmTests;
+			packageProductDependencies = (
+			);
+			productName = TaskAlarmTests;
+			productReference = 21CB690B3708572759DB7192 /* TaskAlarmTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		395555B33C55556A06B5FA6F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = C5FA5063DA6ADE0D4A6E9B7B /* Build configuration list for PBXProject "TaskAlarm" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 631D1CBF8E697D2F98495974;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = EC161C27C9464C143043F428 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AE45EC7F3ECD34D1E04D7A71 /* TaskAlarm */,
+				CFCD50AFD045668851C7A3DF /* TaskAlarmTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		42285092559E9E68A5DFA04D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A784C4E291E991BC75D0B4E /* GateServiceTests.swift in Sources */,
+				4C7DC047C3B3B5B244C10D14 /* GuardPolicyTests.swift in Sources */,
+				7C7AF23D62B2106C103CD591 /* ModelTests.swift in Sources */,
+				F53C19E17C0CBB82BB397C61 /* PhraseTaskTests.swift in Sources */,
+				16CDFB57B7131A26C87782B4 /* QRTaskTests.swift in Sources */,
+				D7490BF12305B888DCCC4CD4 /* SnoozePolicyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A97323AE61C05AF3FFC1B1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E87B406CB2860A7AC687D01F /* Alarm.swift in Sources */,
+				234B783A3B596F1B68D31756 /* AlarmEditView.swift in Sources */,
+				6D33292C83266D7B105E9C4E /* AlarmKitScheduler.swift in Sources */,
+				643147D29C361814A6B8B8BD /* AlarmListView.swift in Sources */,
+				D9BCC975906B7A695DD58E20 /* AlarmScheduling.swift in Sources */,
+				33466B914415389E81734732 /* AppRouter.swift in Sources */,
+				AAE4A6FA629FB67914915A25 /* AuthorizationBlockedView.swift in Sources */,
+				9C50ECB7E0ADFA5AF0CA1D9E /* ContentView.swift in Sources */,
+				94B30715ABD0E2AD99CA795D /* GateService.swift in Sources */,
+				5A0299FCCDA7BC95F11F7321 /* GuardPolicy.swift in Sources */,
+				A7AAEB16170FE6C737CDC559 /* OpenTaskGateIntent.swift in Sources */,
+				DB0BEDB7E3AB042DE3E22FEF /* PendingTaskState.swift in Sources */,
+				F373D75BAE4157D4B5B252BE /* PhraseTask.swift in Sources */,
+				798B5A8BCB852393DF3FD767 /* PhraseTaskView.swift in Sources */,
+				3C99231477F802FA207D2E9E /* PostTaskView.swift in Sources */,
+				2239D358BB4BC22AAAF3A394 /* QRCodeRecord.swift in Sources */,
+				485BD0212779E1FE36B3C235 /* QRScanView.swift in Sources */,
+				55FB2F12BC260BFAECDFCCB7 /* QRSetupView.swift in Sources */,
+				E04F92C10A27C8DA228D6325 /* QRTask.swift in Sources */,
+				33A9F4594BDC2DD0FE9E05AF /* SnoozePolicy.swift in Sources */,
+				266070F6B8A4B602A2F753E8 /* StopWithoutTaskIntent.swift in Sources */,
+				F29467DC591E4EB3B618A2F9 /* TaskAlarmApp.swift in Sources */,
+				18DAB9F950095155A5BEC3E9 /* TaskGateView.swift in Sources */,
+				E433FA3DBB9FEC610FC2E810 /* TaskType.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		028F7BA6A499C25D0ECEDA26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE45EC7F3ECD34D1E04D7A71 /* TaskAlarm */;
+			targetProxy = 424FC024994252C5DE7F5914 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0791CF1DBFFD479257BC514D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.niteshdas.TaskAlarmTests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TaskAlarm.app/TaskAlarm";
+			};
+			name = Release;
+		};
+		36AD7BBF8A17D2C81053BB2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		418415EE4EF5FE77922FA581 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = TaskAlarm/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.niteshdas.TaskAlarm;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		9BB1EF32F7DA8439E8D336FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = TaskAlarm/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.niteshdas.TaskAlarm;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		D2985FA66B7934BBA42CC06D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.niteshdas.TaskAlarmTests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TaskAlarm.app/TaskAlarm";
+			};
+			name = Debug;
+		};
+		EE4DF1754D22FDDAC8A878FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0EB7CCE1482BF965CB3A93F4 /* Build configuration list for PBXNativeTarget "TaskAlarmTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2985FA66B7934BBA42CC06D /* Debug */,
+				0791CF1DBFFD479257BC514D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7078C1E53FE07CF9575274E5 /* Build configuration list for PBXNativeTarget "TaskAlarm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				418415EE4EF5FE77922FA581 /* Debug */,
+				9BB1EF32F7DA8439E8D336FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C5FA5063DA6ADE0D4A6E9B7B /* Build configuration list for PBXProject "TaskAlarm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE4DF1754D22FDDAC8A878FC /* Debug */,
+				36AD7BBF8A17D2C81053BB2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 395555B33C55556A06B5FA6F /* Project object */;
+}
