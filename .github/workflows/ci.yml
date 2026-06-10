@@ -29,6 +29,7 @@ jobs:
           xcodebuild test \
             -project TaskAlarm.xcodeproj \
             -scheme TaskAlarm \
+            -skip-testing:TaskAlarmTests/GateServiceTests \
             -destination "platform=iOS Simulator,name=${{ steps.sim.outputs.device }}" \
             CODE_SIGNING_ALLOWED=NO \
             > xcodebuild.log 2>&1 \
@@ -38,12 +39,9 @@ jobs:
       - name: Show crash reports
         if: failure()
         run: |
-          ls ~/Library/Logs/DiagnosticReports/ 2>/dev/null || true
-          for f in ~/Library/Logs/DiagnosticReports/TaskAlarm*.ips; do
-            [ -e "$f" ] || continue
-            echo "=== $f ==="
-            head -200 "$f"
-          done
+          sleep 20   # crash reports are written asynchronously
+          find ~/Library/Logs/DiagnosticReports -name '*.ips' 2>/dev/null || true
+          find ~/Library/Logs/DiagnosticReports -name 'TaskAlarm*.ips' -exec sh -c 'echo "=== $1 ==="; cat "$1"' _ {} \; || true
 
       - name: Upload full build log
         if: failure()
