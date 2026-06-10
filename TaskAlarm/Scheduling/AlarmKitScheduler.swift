@@ -8,7 +8,7 @@ struct TaskAlarmMetadata: AlarmMetadata {
 
 final class AlarmKitScheduler: AlarmScheduling {
     static let shared = AlarmKitScheduler()
-    private let manager = AlarmManager.shared
+    private var manager: AlarmManager { .shared }
 
     func requestAuthorization() async -> Bool {
         do {
