@@ -13,13 +13,11 @@ final class GateService {
         self.scheduler = scheduler
     }
 
-    // Note: #Predicate on UUID properties traps inside SwiftData at runtime
-    // (brk 1, seen on iOS 26.5 simulator) — filter in memory instead. Counts
-    // here are tiny (at most a handful of rows).
     private func pendingState(for alarmID: UUID) throws -> PendingTaskState? {
         guard let context = modelContext else { return nil }
-        return try context.fetch(FetchDescriptor<PendingTaskState>())
-            .first { $0.alarmID == alarmID }
+        let descriptor = FetchDescriptor<PendingTaskState>(
+            predicate: #Predicate { $0.alarmID == alarmID })
+        return try context.fetch(descriptor).first
     }
 
     /// Stop pressed without task: record cheat, schedule guard alarm per policy.
@@ -69,8 +67,9 @@ final class GateService {
                 try context.save()
             }
             // Stop the original ringing alarm if still active.
-            if let item = try context.fetch(FetchDescriptor<AlarmItem>())
-                .first(where: { $0.id == originalAlarmID }),
+            let descriptor = FetchDescriptor<AlarmItem>(
+                predicate: #Predicate { $0.id == originalAlarmID })
+            if let item = try context.fetch(descriptor).first,
                let kitID = item.alarmKitID {
                 try? scheduler.stop(id: kitID)
             }
