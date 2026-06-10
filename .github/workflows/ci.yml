@@ -29,7 +29,6 @@ jobs:
           xcodebuild test \
             -project TaskAlarm.xcodeproj \
             -scheme TaskAlarm \
-            -skip-testing:TaskAlarmTests/GateServiceTests \
             -destination "platform=iOS Simulator,name=${{ steps.sim.outputs.device }}" \
             CODE_SIGNING_ALLOWED=NO \
             > xcodebuild.log 2>&1 \

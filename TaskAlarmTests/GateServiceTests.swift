@@ -21,7 +21,10 @@ final class MockScheduler: AlarmScheduling, @unchecked Sendable {
 
 @MainActor
 struct GateServiceTests {
-    func makeService() throws -> (GateService, MockScheduler, ModelContext) {
+    // The container must outlive the test body — returning only its
+    // mainContext lets the container deallocate and the dangling context
+    // traps inside SwiftData on first fetch.
+    func makeService() throws -> (GateService, MockScheduler, ModelContainer) {
         let config = ModelConfiguration(isStoredInMemoryOnly: true)
         let container = try ModelContainer(
             for: AlarmItem.self, QRCodeRecord.self, PendingTaskState.self,
@@ -29,11 +32,12 @@ struct GateServiceTests {
         let mock = MockScheduler()
         let service = GateService(scheduler: mock)
         service.modelContext = container.mainContext
-        return (service, mock, container.mainContext)
+        return (service, mock, container)
     }
 
     @Test func cheatStopSchedulesGuardAndIncrementsCount() async throws {
-        let (service, mock, context) = try makeService()
+        let (service, mock, container) = try makeService()
+        let context = container.mainContext
         let alarmID = UUID()
 
         await service.handleCheatStop(originalAlarmID: alarmID)
@@ -46,7 +50,8 @@ struct GateServiceTests {
     }
 
     @Test func cheatStopGivesUpAtCap() async throws {
-        let (service, mock, context) = try makeService()
+        let (service, mock, container) = try makeService()
+        let context = container.mainContext
         let alarmID = UUID()
         let pending = PendingTaskState(alarmID: alarmID, firedAt: .now,
                                        guardCount: GuardPolicy.maxGuards)
@@ -60,7 +65,8 @@ struct GateServiceTests {
     }
 
     @Test func completeTaskCancelsGuardAndClearsState() async throws {
-        let (service, mock, context) = try makeService()
+        let (service, mock, container) = try makeService()
+        let context = container.mainContext
         let alarmID = UUID()
         await service.handleCheatStop(originalAlarmID: alarmID)
 
@@ -71,7 +77,8 @@ struct GateServiceTests {
     }
 
     @Test func snoozeSchedulesNineMinuteOneShot() async throws {
-        let (service, mock, context) = try makeService()
+        let (service, mock, container) = try makeService()
+        let context = container.mainContext
         let alarmID = UUID()
 
         await service.snooze(originalAlarmID: alarmID, snoozesUsed: 0)
@@ -83,7 +90,8 @@ struct GateServiceTests {
     }
 
     @Test func syncDisablesFiredOneShots() async throws {
-        let (service, _, context) = try makeService()
+        let (service, _, container) = try makeService()
+        let context = container.mainContext
         let oneShot = AlarmItem(hour: 7, minute: 0, weekdays: [], label: "Once")
         oneShot.alarmKitID = UUID()
         oneShot.isEnabled = true
