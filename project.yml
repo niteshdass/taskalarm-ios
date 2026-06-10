@@ -2,7 +2,7 @@ name: TaskAlarm
 options:
   bundleIdPrefix: com.niteshdas
   deploymentTarget:
-    iOS: "26.0"
+    iOS: "26.1"
   createIntermediateGroups: true
 
 targets:
