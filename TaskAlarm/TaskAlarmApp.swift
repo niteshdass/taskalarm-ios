@@ -28,6 +28,12 @@ struct TaskAlarmApp: App {
                 }
             }
             .task {
+                // AlarmKit traps when the app runs as a unit-test host on the
+                // simulator — skip it entirely there.
+                guard NSClassFromString("XCTestCase") == nil else {
+                    authorized = true
+                    return
+                }
                 authorized = await GateService.shared.scheduler.requestAuthorization()
                 resumePendingGate()
                 for await alarms in AlarmManager.shared.alarmUpdates {
